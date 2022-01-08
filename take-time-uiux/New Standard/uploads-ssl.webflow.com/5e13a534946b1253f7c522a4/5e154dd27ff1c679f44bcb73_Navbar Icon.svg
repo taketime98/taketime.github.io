@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="17px" viewBox="0 0 29 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stay" transform="translate(-1384.000000, -26.000000)">
+            <g id="Icon" transform="translate(1384.000000, 27.000000)">
+                <g id="Group-2" transform="translate(0.500000, 0.000000)">
+                    <line x1="0" y1="3.5" x2="10" y2="3.5" id="Line" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <line x1="0" y1="9.5" x2="12" y2="9.5" id="Line-Copy" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <line x1="1.00613962e-16" y1="15.5" x2="25" y2="15.5" id="Line-Copy-2" stroke="#FFFFFF" stroke-linecap="square"></line>
+                    <path id="Oval" d="M20,-0.5 C22.7614237,-0.5 25,1.73857625 25,4.5 C25,7.26142375 22.7614237,9.5 20,9.5 C17.2385763,9.5 15,7.26142375 15,4.5 C15,1.73857625 17.2385763,-0.5 20,-0.5 Z M20,0.5 C17.790861,0.5 16,2.290861 16,4.5 C16,6.709139 17.790861,8.5 20,8.5 C22.209139,8.5 24,6.709139 24,4.5 C24,2.290861 22.209139,0.5 20,0.5 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <line x1="24" y1="7.5" x2="28" y2="10.5" id="Line-2" stroke="#FFFFFF" stroke-linecap="square"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
