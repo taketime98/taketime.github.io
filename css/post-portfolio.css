@@ -1,0 +1,347 @@
+/** 
+*
+* Art Single Portfolio Template
+*
+*/
+
+.title-masking {
+    background-size: 0 0;
+}
+
+body[class*="Chrome"] .title-masking,
+body[class*="Safari"] .title-masking {
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 50% 50%;
+}
+
+.touchevents body[class*="Safari"] .title-masking {
+    background-attachment: scroll;
+}
+
+/* Gallery on left */
+
+.single-gallery-col2 {
+    position: relative;
+}
+
+.single-col2-gallery-wrap .single-gallery-wrap-inn[data-style="filled"] {
+    opacity: 0;
+}
+
+.single-gallery-col2 .title-wrap {
+    padding-top: 40px;
+}
+
+.single-gallery-col2-filled .title-wrap {
+    padding-top: 80px;
+}
+
+/* list layout */
+
+.ux-is-galllery-template-body .list-layout {
+    margin-top: 0;
+}
+
+.list-layout-col {
+    display: flex;
+}
+
+.list-layout-col:before;
+.list-layout-col:after {
+    display: none;
+}
+
+.gallery-wrap-sidebar .list-layout-col {
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+
+.list-layout>div:last-child {
+    margin-bottom: 0;
+}
+
+.list-layout-item {
+    display: inline-block;
+    float: left;
+}
+
+.list-layout-col1-item {
+    width: 100%;
+}
+
+.list-layout-col2-item {
+    width: 50%;
+}
+
+.list-layout-col3-item {
+    width: 33.33333%;
+}
+
+.list-layout-col4-item {
+    width: 25%;
+}
+
+.gallery-wrap-sidebar .list-layout-inside {
+    padding-left: 20px;
+}
+
+.gallery-images-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-layout~.videoWrapper {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.list-layout[data-gap="0"]~.videoWrapper {
+    margin-top: 0;
+}
+
+.list-layout[data-gap="2"]~.videoWrapper {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.list-layout[data-gap="10"]~.videoWrapper {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.list-layout[data-gap="20"]~.videoWrapper {
+    margin-bottom: 0;
+}
+
+.list-layout[data-gap="40"]~.videoWrapper {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.list-layout[data-gap="60"]~.videoWrapper {
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+
+.list-layout[data-gap="80"]~.videoWrapper {
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.video-post-wrap {
+    margin-bottom: 0;
+}
+
+.gallery-spacing-2 .video-post-wrap {
+    margin-bottom: 2px;
+}
+
+.gallery-spacing-2 .list-layout-inside {
+    margin: 2px 0 0 2px;
+}
+
+.gallery-spacing-2 .list-layout {
+    margin: -2px 0 0 -2px;
+}
+
+.gallery-spacing-10 .list-layout-inside {
+    margin: 10px 0 0 10px;
+}
+
+.gallery-spacing-10 .list-layout {
+    margin: -10px 0 0 -10px;
+}
+
+.gallery-spacing-10 .videoWrapper {
+    margin-bottom: 10px;
+}
+
+.gallery-spacing-20 .list-layout-inside {
+    margin: 20px 0 0 20px;
+}
+
+.gallery-spacing-20 .list-layout {
+    margin: -20px 0 0 -20px;
+}
+
+.gallery-spacing-20 .videoWrapper {
+    margin-bottom: 20px;
+}
+
+.gallery-spacing-40 .list-layout-inside {
+    margin: 40px 0 0 40px;
+}
+
+.gallery-spacing-40 .list-layout {
+    margin: -40px 0 0 -40px;
+}
+
+.gallery-spacing-40 .videoWrapper {
+    margin-bottom: 40px;
+}
+
+.gallery-spacing-60 .list-layout-inside {
+    margin: 60px 0 0 60px;
+}
+
+.gallery-spacing-60 .list-layout {
+    margin: -60px 0 0 -60px;
+}
+
+.gallery-spacing-60 .videoWrapper {
+    margin-bottom: 60px;
+}
+
+.gallery-spacing-80 .list-layout-inside {
+    margin: 80px 0 0 80px;
+}
+
+.gallery-spacing-80 .list-layout {
+    margin: -80px 0 0 -80px;
+}
+
+.gallery-spacing-80 .videoWrapper {
+    margin-bottom: 80px;
+}
+
+.list-author-unit {
+    display: none;
+}
+
+.list-layout-inside-caption {
+    line-height: 2;
+}
+
+.list-layout-inside-caption.center {
+    text-align: center;
+}
+
+.list-layout-inside-caption.right {
+    text-align: right;
+}
+
+/*hosted video */
+
+.single-col2-gallery-wrap .videoWrapper video {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* 1px issue for none gap */
+
+.list-layout[data-gap="0"] .single-image {
+    overflow: hidden;
+}
+
+.list-layout[data-gap="0"] .ux-lazyload-wrap {
+    background-color: transparent;
+}
+
+.list-layout-col .lightbox-item {
+    display: block;
+    overflow: hidden;
+}
+
+.list-layout-text {
+    clear: both;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.gallery-spacing-2 .list-layout-text {
+    margin: 0 0 -2px 2px;
+}
+
+.gallery-spacing-10 .list-layout-text {
+    margin: 0 0 0 10px;
+}
+
+.gallery-spacing-20 .list-layout-text {
+    margin: 0 0 0 20px;
+}
+
+.gallery-spacing-40 .list-layout-text {
+    margin: 0 0 0 40px;
+}
+
+.gallery-spacing-60 .list-layout-text {
+    margin: 0 0 0 60px;
+}
+
+.gallery-spacing-80 .list-layout-text {
+    margin: 0 0 0 80px;
+}
+
+@media (max-width: 767px) {
+    .responsive-ux.gallery-info-property {
+        margin-top: 0;
+    }
+    .list-layout-col {
+        display: block;
+    }
+    .responsive-ux .list-layout-inside {
+        width: auto !important;
+    }
+    .responsive-ux .list-layout-col2-item,
+    .responsive-ux .list-layout-col3-item,
+    .responsive-ux .list-layout-col4-item,
+    .responsive-ux .gallery-images-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .responsive-ux .list-layout[data-gap="0"] .gallery-images-img {
+        height: calc(100% + 1px) !important;
+    }
+    .list-layout-text {
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .single-portfolio-2c-body .wrap-all {
+        overflow: initial;
+    }
+    .sticky_column {
+        position: sticky;
+        top: 140px;
+    }
+    .single-gallery-col2-filled .sticky_column {
+        top: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    div.single-col2-text-wrap[class*="col-sm-"] {
+        position: static;
+        width: 100%;
+    }
+    .responsive-ux .is_stuck,
+    .responsive-ux .is_stuck+div,
+    .responsive-ux .single-gallery-col2-filled>div {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    .responsive-ux .single-gallery-col2-filled>div.single-col2-gallery-wrap {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .responsive-ux .single-gallery-wrap-inn[data-style="filled"] {
+        margin: 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    body.single.responsive-ux .single-gallery-col2-filled .title-wrap {
+        padding-top: 160px;
+    }
+}

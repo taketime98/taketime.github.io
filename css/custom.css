@@ -1,0 +1,993 @@
+/* ART HTML Customize 
+
+Secton 1. General
+Secton 2. Colors
+Secton 3. Fonts
+
+*/
+
+/*   Secton 1. General   */
+
+body {
+    /* Desktop */
+    --main-fluid-padding-lr: 40px;
+    /* Main Container Fluid width Left & Right padding */
+    --header-fluid-padding-lr: 40px;
+    /* Header & Footer Fluid width Left & Right padding */
+    --main-fluid-max-width: 3000px;
+    /* Fluid max width, or set it as none */
+    --header-height: 80px;
+    /* Header height */
+    --logo-height: 40px;
+    /* Logo on header */
+    --menuicon-height: 26px;
+    /* Menu icon size */
+    --headericon-height: 26px;
+    /* Header icon(6 & 9 dots) size */
+    --spacing-menu-item-header: 40px;
+    /* Menu items spacing on header */
+    --bgcolor-expanded-panel: #fff;
+    /* Expanded panel color*/
+    --column-spacing-footer: 60px;
+    /* Footer columns spacing */
+    --row-spacing-footer: 20px;
+    /* Footer rows spacing */
+    /* Mobile */
+    --header-height-mobile: 40px;
+    /* Header height */
+    --logo-height-m: 30px;
+    /* Logo on header */
+    --menuicon-height-m: 16px;
+    /* Menu icon size */
+    --headericon-height-m: 16px;
+    /* Header icon size */
+    --spacing-menu-item-header-m: 10px;
+    /* Menu items spacing on header */
+    --column-spacing-footer-m: 10px;
+    /* Footer columns spacing */
+    --row-spacing-footer-m: 8px;
+    /* Footer rows spacing */
+}
+
+@media (min-width: 768px) {
+    /* Desktop */
+    .navi-corner .navi-header>div>ul>li,
+    .navi-corner .navi-logo {
+        padding: 20px;
+        /* Corner Menu layout: logo and menu items spacing */
+    }
+}
+
+@media (max-width:767px) {}
+
+/*   Secton 2. Colors   */
+
+/* Page BG */
+
+body,
+#search-overlay,
+.carousel-control,
+#login-form.modal .modal-dialog {
+    background-color: #fff;
+}
+
+body.custom-background #wrap-outer {
+    background: none;
+}
+
+.quote-wrap,
+.mouse-icon,
+.social-icon-triggle,
+.carousel-control,
+.blog-unit-link-li:hover,
+.blog-unit-link-li:hover a,
+.comment-body::before {
+    color: #fff;
+}
+
+/* Header Bar Background color */
+
+#header,
+.page_from_top.header-scrolled #header,
+.navi-show-h .navi-header .sub-menu {
+    background-color: transparent;
+}
+
+.navi-header .sub-menu>li,
+.navi-header .menu ul.children>li {
+    background-color: #fff;
+}
+
+/* Expanded panel Background color */
+
+.menu-panel,
+.portfolio-panel {
+    background-color: var(--bgcolor-expanded-panel, #fff);
+}
+
+.show_mobile_menu.hide-menu-desktop:not(.navi-side-menu):not(.navi-top-menu) #header,
+.show_popup #header {
+    background-color: transparent;
+}
+
+/* PageLoader */
+
+.page-loading {
+    background-color: #fff;
+}
+
+/* Auxiliary Color */
+
+.tagcloud a,
+.archive-bar,
+.blog-unit-link-li,
+.audio-unit,
+.pagenumber a,
+.quote-wrap,
+.entry pre,
+.comment pre,
+.pagenumber span {
+    background-color: #f8f8f8;
+}
+
+.widget_archive li,
+.widget_categories li,
+.widget_nav_menu li,
+.widget_pages li,
+.widget_recent_entries li,
+.widget_recent_comments li,
+.widget_meta li,
+.widget_rss li,
+.nav-tabs {
+    border-color: #f8f8f8;
+}
+
+/* Default Menu Color(on header) */
+
+.navi-trigger,
+.navi-header li.menu-item a,
+#header .socialmeida-a,
+.portfolio-icon,
+.menu-panel-bottom,
+.menu-panel-bottom a {
+    /* Menu items, hamburg icons, social links(on header) Color - Default*/
+    color: #313139;
+}
+
+.navi-header li.menu-item a:hover,
+.navi-header li.menu-item a:focus,
+header li>a:hover,
+header li>a:focus,
+.socialmeida-a:hover .socialmeida-text,
+.socialmeida-a:focus .socialmeida-text,
+.socialmeida-a:hover .fa {
+    /* Menu mouseover color (on header) - Default */
+    color: #0c07d4;
+}
+
+header .navi-header li.current-menu-item>a {
+    /* Menu Current Item color (on header) - Default */
+    color: #0c07d4;
+}
+
+/* Alertnative Menu Color(on header) */
+
+.alt-menu .navi-trigger,
+.alt-menu #header .socialmeida-a,
+.alt-menu .navi-header li.menu-item a,
+.alt-menu .portfolio-icon {
+    /* Menu items, hamburg icons, social links(on header) Color - Alertnative */
+    color: #fff;
+}
+
+/* Menu on header on hover */
+
+.alt-menu header li a:hover,
+.alt-menu header li a:focus,
+.alt-menu .navi-header li.menu-item a:hover,
+.alt-menu header .socialmeida-a:hover .socialmeida-text,
+.alt-menu header .socialmeida-a:focus .socialmeida-text,
+.alt-menu header .socialmeida-a:hover .fa {
+    /* Menu mouseover color (on header) - Alertnative */
+    color: #63fd9a;
+}
+
+.alt-menu header li.current-menu-item>a,
+.alt-menu header .navi-header li.current-menu-item>a {
+    /* Menu Current Item color (on header) - Alertnative */
+    color: #0c07d4;
+}
+
+/* Menu Color on Expanded Panel */
+
+.navi a,
+.show_mobile_menu:not(.navi-show-icon) .navi-trigger,
+.show_popup .navi-trigger,
+.show_popup .portfolio-icon,
+.show_mobile_menu:not(.navi-show-icon):not(.navi-top-menu):not(.navi-side-menu) .portfolio-icon,
+.menu-panel-bottom,
+.menu-panel-bottom a,
+input.search_top_form_text:focus,
+input.search_top_form_text:focus::placeholder {
+    /* Menu items, hamburg icons, social links(on expanded panel) Color*/
+    color: #313139;
+}
+
+.navi a:hover,
+.show_mobile_menu:not(.navi-show-icon) .navi-trigger:hover,
+.show_mobile_menu:not(.navi-show-icon):not(.navi-top-menu) .portfolio-icon:hover,
+.show_popup .navi-trigger:hover,
+.show_popup .portfolio-icon:hover,
+.show_mobile_menu .menu-panel-bottom a:hover,
+.show_mobile_menu .menu-panel-bottom a:hover .fa {
+    /* Menu mouseover color (on expanded panel) */
+    color: #0c07d4;
+}
+
+.navi li.current-menu-item>a {
+    /* Menu Current Item color (on expanded panel) */
+    color: #0c07d4;
+}
+
+/* Logo text color*/
+
+.logo-text,
+.bm-enable-univer.default-logo-univer .logo-text {
+    color: #313139;
+}
+
+/* Text Logo(Alternative) color*/
+
+.alt-logo .logo-text,
+.bm-enable-univer.alt-logo-univer .logo-text {
+    color: #fff;
+}
+
+/* Tagline(subheading) text color */
+
+.taglines,
+.bm-enable-univer.default-logo-univer .taglines {
+    color: #313139;
+}
+
+/* Tagline(Alternative) text color */
+
+.alt-logo .taglines,
+.bm-enable-univer.alt-logo-univer .taglines {
+    color: #fff;
+}
+
+/* Text Logo on the Menu panel color*/
+
+.show_mobile_menu:not(.navi-show-icon):not(.navi-top-menu):not(.navi-side-menu) .logo-text,
+.show_popup:not(.navi-show-icon) .logo-text {
+    color: #313139;
+}
+
+/* Tagline(subheading) on the Menu panel color*/
+
+.show_mobile_menu:not(.navi-show-icon):not(.navi-top-menu):not(.navi-side-menu) .taglines,
+.show_popup:not(.navi-show-icon) .taglines {
+    color: #313139;
+}
+
+/* Post & Page Color */
+
+/* Headding */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title-wrap-tit,
+.title-wrap-h1,
+.archive-tit a,
+.post-navi-a {
+    color: #313139;
+}
+
+.post_social:before,
+.post_social:after {
+    border-color: #313139;
+}
+
+/* Content text color*/
+
+body,
+a,
+.entry>h1,
+.entry>h2,
+.entry>h3,
+.entry>h4,
+.entry>h5,
+.entry>h6,
+.article-tag a[rel="tag"]:hover,
+#content_wrap,
+#comments,
+.entry code,
+h3#reply-title small,
+#comments .nav-tabs li.active h3#reply-title .logged-in-as,
+#comments .nav-tabs li a:hover h3 .logged-in-as,
+.stars a:hover .fullwrap-block-inn a,
+.woocommerce a.remove {
+    color: #414145;
+}
+
+.blog-unit-link-li:hover {
+    background-color: #414145;
+}
+
+/* linked text color*/
+
+.entry p a,
+.comment p a,
+.text_block li a,
+.product_meta a,
+.comment-list .pingback .comment-body a:not(.comment-edit-link),
+.comment-list .trackback .comment-body a:not(.comment-edit-link),
+.post-categories a,
+.widget_archive li,
+.widget_categories li,
+.widget_nav_menu li,
+.widget_pages li,
+.fourofour-wrap a,
+.pagenums .current,
+.page-numbers.current,
+.gallery-info-property-con a,
+.grid-meta-a,
+.comment-reply-link:hover,
+.comment-edit-link:hover,
+.woocommerce-info::before {
+    color: #0c07d4;
+}
+
+.comment-body::before {
+    background-color: #0c07d4;
+}
+
+/* linked hover color*/
+
+a:hover,
+a:focus,
+.entry p>a:hover,
+.comment p a:hover,
+.text_block li a:hover,
+.product_meta a:hover,
+.comment-form .logged-in-as a:hover,
+.sidebar_widget a:hover,
+.archive-tit a:hover,
+#sidebar a:hover,
+#comments .comment-author a:hover,
+#comments .reply a:hover,
+.post-meta-social-li a.share:hover,
+.comment-text a:hover,
+.comment-list .pingback .comment-body a:not(.comment-edit-link):hover,
+.comment-list .trackback .comment-body a:not(.comment-edit-link):hover,
+.sea-quanlity-btn:hover {
+    color: #414145;
+}
+
+.tagcloud a:hover {
+    background-color: #5179FC;
+}
+
+/* Meta text color */
+
+.article-meta-unit,
+.article-meta-unit:not(.article-meta-unit-cate)>a,
+.comment-meta,
+.comment-meta a,
+.comment-reply-link,
+.title-wrap-des,
+.grid-meta-a:after,
+.post-edit-link,
+.comment-edit-link,
+.archive-sticky,
+.article-tag,
+.article-cate-a:hover:after,
+.article-tag a[rel="tag"]:hover:after {
+    color: #adadad;
+}
+
+.article-cate-a:after,
+.article-tag a[rel="tag"]:after {
+    color: #adadad !important;
+}
+
+/* Meta linked text color */
+
+.article-cate-a,
+.article-cate-a:after,
+.article-tag a[rel="tag"],
+.article-tag a[rel="tag"]:after {
+    color: #0c07d4;
+}
+
+/* Meta linked text hover color */
+
+.article-cate-a:hover,
+.archive-meta .article-cate-a:hover,
+.article-tag a[rel="tag"]:hover {
+    color: #414145;
+}
+
+/* Image caption text color */
+
+.list-layout-inside-caption,
+figcaption {
+    color: #666;
+}
+
+/* Post navigation(next & prev) text color */
+
+.post-navi-single-normal .navi-title-tag,
+.post-navi-single-normal .post-navi-unit-tit {
+    color: #313139;
+}
+
+/* Commnet titile color */
+
+.comments-title,
+.comm-reply-title {
+    color: #313139;
+}
+
+/* Commnet content text color */
+
+.comment p {
+    color: #313139;
+}
+
+/* Commnent author name color */
+
+.comment-author,
+.comment-author .url {
+    color: #313139;
+}
+
+/* Archive page item title hover color */
+
+.archive-tit a:hover {
+    color: #0c07d4;
+}
+
+/* Selection text color */
+
+::selection {
+    background-color: #eee;
+    color: #333;
+}
+
+/* Buttons */
+
+button,
+input[type="submit"],
+.moudle .ux-btn.tw-style-a,
+.archive-more-a {
+    color: #313139;
+}
+
+/* Buttons hover text color */
+
+button:hover,
+input[type="submit"]:hover,
+.moudle .ux-btn.tw-style-a:hover,
+.archive-more-a:hover {
+    color: #fff;
+}
+
+/* Buttons hover Background color */
+
+button:hover,
+input[type="submit"]:hover,
+.moudle .ux-btn.tw-style-a:hover,
+.archive-more-a:hover:after {
+    background-color: #313139;
+}
+
+/* Input text and border color*/
+
+textarea,
+input,
+.quantity input:focus,
+.select2-container--default .select2-selection--single,
+input::placeholder,
+textarea::placeholder {
+    color: #adadad;
+    border-color: #adadad;
+}
+
+/* Input(focus) text and border color */
+
+.moudle input:focus,
+.moudle textarea:focus,
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus,
+textarea:focus,
+input:focus,
+.comment-reply-title:hover,
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: #313139;
+    border-color: #313139;
+}
+
+/* Sidebar widget title color */
+
+.sidebar_widget .widget-container .widget-title,
+.sidebar_widget .widget-container .widget-title a {
+    color: #414145;
+}
+
+/* Sidebar widget content text color */
+
+.widget-container,
+.widget-container a {
+    color: #414145;
+}
+
+/* Sidebar widget content linked text color */
+
+.widget-container a {
+    color: #414145;
+}
+
+/* Sidebar widget content linked text hover color */
+
+.widget-container a:hover {
+    color: #0c07d4;
+}
+
+/* Footer text color */
+
+.copyright,
+.copyright a,
+.footer-info,
+.footer-info a,
+#footer .logo-text,
+.footer-info .socialmeida-a {
+    color: #414145;
+}
+
+/* Footer linked text color */
+
+.copyright a,
+.footer-info a,
+.footer-info .socialmeida-a {
+    color: #414145;
+}
+
+/* Footer linked text hover color */
+
+.copyright a:hover,
+.footer-info a:hover,
+.footer-info .socialmeida-a:hover {
+    color: #0c07d4;
+}
+
+/* Footer Background color */
+
+#footer {
+    background-color: transparent;
+}
+
+/* Menu icon color */
+
+.svg-style02-line-rect,
+.svg-style01-line,
+.headericon-rect {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Social medis color */
+
+.btn-mod-wrap .ux-cb-btn-facebook:hover,
+.post-meta-social-li .fa-facebook:hover,
+.socialmeida-a:hover .fa-facebook:before,
+.socialmeida-a:hover .fa-facebook-square:before {
+    color: #3b5998;
+}
+
+.btn-mod-wrap .ux-cb-btn-twitter:hover,
+.post-meta-social-li .fa-twitter:hover,
+.socialmeida-a:hover .fa-twitter:before,
+.socialmeida-a:hover .fa-twitter-square:before {
+    color: #1da1f2;
+}
+
+.btn-mod-wrap .ux-cb-btn-instagram:hover,
+.post-meta-social-li .fa-instagram:hover,
+.socialmeida-a:hover .fa-instagram:before {
+    color: #405de6;
+}
+
+.btn-mod-wrap .ux-cb-btn-pinterest:hover,
+.post-meta-social-li .fa-pinterest:hover,
+.socialmeida-a:hover .fa-pinterest:before {
+    color: #833ab4;
+}
+
+.btn-mod-wrap .ux-cb-btn-behance:hover,
+.post-meta-social-li .fa-behance:hover,
+.socialmeida-a:hover .fa-behance:before {
+    color: #1769ff;
+}
+
+.btn-mod-wrap .ux-cb-btn-dribbble:hover,
+.post-meta-social-li .fa-dribbble:hover,
+.socialmeida-a:hover .fa-dribbble:before {
+    color: #ea4c89;
+}
+
+.btn-mod-wrap .ux-cb-btn-digg:hover,
+.post-meta-social-li .fa-digg:hover,
+.socialmeida-a:hover .fa-digg:before {
+    color: #005be2;
+}
+
+.btn-mod-wrap .ux-cb-btn-reddit:hover,
+.post-meta-social-li .fa-reddit:hover,
+.socialmeida-a:hover .fa-reddit:before {
+    color: #ff4500;
+}
+
+.btn-mod-wrap .ux-cb-btn-linkedin:hover,
+.post-meta-social-li .fa-linkedin:hover,
+.socialmeida-a:hover .fa-linkedin:before {
+    color: #0077b5;
+}
+
+.btn-mod-wrap .ux-cb-btn-stumbleupon:hover,
+.post-meta-social-li .fa-stumbleupon:hover,
+.socialmeida-a:hover .fa-stumbleupon:before {
+    color: #eb4924;
+}
+
+.btn-mod-wrap .ux-cb-btn-tumblr:hover,
+.post-meta-social-li .fa-tumblr:hover,
+.socialmeida-a:hover .fa-tumblr:before {
+    color: #35465c;
+}
+
+.btn-mod-wrap .ux-cb-btn-mail:hover,
+.post-meta-social-li .fa-envelope-o:hover,
+.socialmeida-a:hover .fa-envelope-o:before {
+    color: #c1d82f;
+}
+
+/*   Secton 3. Fonts   */
+
+@font-face {
+    font-family: "Sea Font";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/seafont-regular.woff2") format("woff2");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Sea Font";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/seafont-semibold.woff2") format("woff2");
+    font-display: fallback;
+}
+
+body {
+    font-family: "Sea Font";
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 1.3;
+    font-size: 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.taglines {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.logo-text,
+.menu li>a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ux-btn-text {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 66px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Menu on Header */
+
+.navi-header a,
+.header-bar-social .socialmeida-a,
+.navi-header .menu li>a {
+    font-size: 16px;
+}
+
+/* Menu on Expanded panel */
+
+.navi .menu li>a {
+    font-size: 48px;
+    line-height: 1.0;
+}
+
+/* Expanded panel bottom text */
+
+.menu-panel-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Single Post title */
+
+body.single .title-wrap-tit,
+.title-wrap-h1 {
+    font-size: 52px;
+}
+
+/* Input */
+
+textarea,
+input,
+input::placeholder,
+textarea::placeholder {
+    font-size: 18px;
+}
+
+/* Button */
+
+.btn-mod-wrap,
+button,
+input[type="submit"] {
+    font-size: 16px;
+}
+
+/* Meta text */
+
+.article-meta,
+.archive-des,
+.archive-meta,
+.title-wrap-des {
+    font-size: 16px;
+}
+
+/* sidebar widget title */
+
+.widget-title {
+    font-size: 18px;
+}
+
+/* Footer */
+
+.footer-info,
+.footer-info .menu li a {
+    font-size: 14px;
+}
+
+/* Social links on footer */
+
+.footer-social .socialmeida-a .fa,
+.footer-social .socialmeida-text {
+    font-size: 14px;
+}
+
+@media (max-width: 767px) {
+    /* Font settings Mobile */
+    /* Main Content Font Size */
+    .responsive-ux .entry p,
+    .responsive-ux .text_block p,
+    .responsive-ux .text_block span,
+    .responsive-ux .text_block div,
+    .responsive-ux .text_block a,
+    .responsive-ux .text_block h1,
+    .responsive-ux .text_block h2,
+    .responsive-ux .text_block h3,
+    .responsive-ux .text_block h4,
+    .responsive-ux .text_block h5,
+    .responsive-ux .text_block h6,
+    .responsive-ux .text_block li,
+    .responsive-ux .text_block strong,
+    .responsive-ux .text_block b,
+    .responsive-ux .text_block i {
+        font-size: var(--font-size-m, inherit) !important;
+    }
+    .responsive-ux legend,
+    .responsive-ux label,
+    .responsive-ux button,
+    .responsive-ux select,
+    .responsive-ux textarea,
+    .responsive-ux input,
+    .responsive-ux button,
+    .responsive-ux .ux-btn {
+        font-size: 16px;
+    }
+    /* Text logo font size */
+    .responsive-ux #header .logo-text {
+        font-size: 16px;
+    }
+    /* Logo footer */
+    .responsive-ux #logo-footer .logo-text {
+        font-size: 14px;
+    }
+    /* Tagline */
+    .responsive-ux .taglines {
+        font-size: 10px;
+    }
+    /* Menu header*/
+    body.show-menu-item-mobile.responsive-ux .navi-header {
+        margin-left: 0px !important;
+    }
+    .responsive-ux .navi-header a,
+    .responsive-ux .header-bar-social .socialmeida-a,
+    .responsive-ux .navi-header li>a {
+        font-size: 16px;
+    }
+    .responsive-ux .navi-header .sub-menu a {
+        font-size: 16px;
+    }
+    /*Menu on panel*/
+    .responsive-ux .navi .menu li>a {
+        font-size: 20px;
+    }
+    .responsive-ux .navi .sub-menu a {
+        font-size: 20px;
+    }
+    /* Page & Post title*/
+    body.single.responsive-ux .title-wrap-tit,
+    .responsive-ux .title-wrap-h1 {
+        font-size: 38px;
+    }
+    /* h1 - h6 default */
+    .responsive-ux h1 {
+        font-size: 32px;
+    }
+    .responsive-ux h2 {
+        font-size: 28px;
+    }
+    .responsive-ux h3 {
+        font-size: 24px;
+    }
+    .responsive-ux h4 {
+        font-size: 20px;
+    }
+    .responsive-ux h5 {
+        font-size: 18px;
+    }
+    .responsive-ux h6 {
+        font-size: 16px;
+    }
+    /* Meta */
+    .responsive-ux .article-meta,
+    .responsive-ux .comment-form .logged-in-as,
+    .responsive-ux .comment-meta,
+    .responsive-ux .archive-meta,
+    .title-wrap-des,
+    .responsive-ux .entry-summary div[itemprop="description"] p {
+        font-size: 0.8em;
+    }
+    /* Caption of single portfolio */
+    .responsive-ux .list-layout-inside-caption,
+    .responsive-ux figcaption {
+        font-size: 0.8em;
+    }
+    /* Button*/
+    .responsive-ux button,
+    .responsive-ux input[type="submit"] {
+        font-size: 14px;
+    }
+    /* Form */
+    .responsive-ux textarea,
+    .responsive-ux input {
+        font-size: 16px
+    }
+    /* Footer */
+    .responsive-ux .footer-info {
+        font-size: 12px;
+    }
+    /* Post navi*/
+    .responsive-ux .post-navi-single,
+    .responsive-ux .post-navi-unit-tit {
+        font-size: 1em;
+    }
+    /* Archive title */
+    .responsive-ux .archive-title .title-wrap-tit {
+        font-size: 26px;
+    }
+    /* Archive items title */
+    .responsive-ux .archive-tit {
+        font-size: 22px;
+    }
+    /* widget title */
+    .responsive-ux .widget-title {
+        font-size: 18px;
+    }
+    /* widget content */
+    .responsive-ux .widget-container {
+        font-size: 16px;
+    }
+    /* Colors */
+    /* Menu icon & Header icon default color on mobile */
+    .default-logo-menu-mobile .navi-trigger,
+    .default-logo-menu-mobile .portfolio-icon {
+        color: #313139;
+    }
+    /* Text logo default color mobile*/
+    .default-logo-menu-mobile .logo-text {
+        color: #313139;
+    }
+    /* Tagline default color mobile*/
+    .default-logo-menu-mobile .taglines {
+        color: #313139;
+    }
+    /* Menu icon & Header icon alternative color mobile*/
+    .alt-logo-menu-mobile .navi-trigger,
+    .alt-logo-menu-mobile .portfolio-icon {
+        color: #fff;
+    }
+    /* Text logo alternative color mobile*/
+    .alt-logo-menu-mobile .logo-text {
+        color: #fff;
+    }
+    /* Tagline default color mobile*/
+    .default-logo-menu-mobile .taglines {
+        color: #313139;
+    }
+    /* Menu icon & Header icon color when expanded panel is opened on mobile */
+    .show_mobile_menu .navi-trigger,
+    .show_popup .navi-trigger,
+    .show_mobile_menu .portfolio-icon,
+    .show_popup .portfolio-icon {
+        color: #313139;
+    }
+    /* Logo color when expanded panel is opened on mobile */
+    .show_mobile_menu .logo-text,
+    .show_popup .logo-text {
+        color: #313139;
+    }
+    /* Tagline color when expanded panel is opened on mobile */
+    .show_mobile_menu .taglines,
+    .show_popup .taglines {
+        color: #313139;
+    }
+}
