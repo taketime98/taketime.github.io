@@ -1,0 +1,1233 @@
+/*------------------------------------------------------------------
+[Table of contents]
+1. 3rd Part CSS Libraries
+2. Global CSS
+3. Menu CSS
+4. Home CSS
+5. About CSS
+6. Image Slider CSS
+7. Blog Page CSS
+8. Single Post CSS
+9. Contact Page CSS
+10. Footer CSS
+11. Responsive CSS
+-------------------------------------------------------------------*/
+
+/* ===================================
+    1. 3rd Part CSS Libraries
+====================================== */
+
+@import url("css/clear.css");
+@import url("css/sm-clean.css");
+@import url("css/swiper.min.css");
+@import url("css/prettyPhoto.css");
+@import url("css/common.css");
+/* ===================================
+    2. Global CSS
+====================================== */
+
+body.wait-preloader {
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+body.page-background {
+    background-image: url("images/lines.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+body a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color .2s ease;
+}
+
+body a:hover {
+    color: #acacac;
+}
+
+body p {
+    margin-bottom: 16px;
+}
+
+body.open.done {
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.site-wrapper {
+    overflow: hidden;
+}
+
+.site-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.doc-loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: #000;
+}
+
+.doc-loader img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-logo img {
+    max-width: none;
+    max-height: none;
+    width: 135px;
+    height: 135px;
+}
+
+.site-content {
+    position: relative;
+    transition: transform 0.7s ease;
+    width: calc(100% - 235px);
+    margin-left: 165px;
+    margin-top: 200px;
+    padding: 0 35px;
+}
+
+.open .site-content {
+    transform: translateY(70px);
+}
+
+h1.entry-title.page-title {
+    font-family: 'Unna', serif;
+    font-weight: 700;
+    margin-bottom: 60px;
+    font-size: 47px;
+    line-height: 120%;
+    padding: 0;
+}
+
+.animate {
+    opacity: 0;
+    transition: .5s ease-in;
+    -ms-transform: translate(0px, 70px);
+    -webkit-transform: translate(0px, 70px);
+    transform: translate(0px, 70px);
+}
+
+.animate.show-it {
+    opacity: 1;
+    -ms-transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+.content-1170 {
+    width: 1170px;
+    max-width: 95%;
+}
+
+.content-960 {
+    width: 960px;
+    max-width: 95%;
+}
+
+.medium-text {
+    font-size: 22px;
+    line-height: 40px;
+    color: #666;
+}
+
+.info-code {
+    margin-bottom: 30px;
+}
+
+.info-code-title {
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    line-height: 100%;
+    font-weight: 500;
+    color: #666;
+}
+
+.info-code-content,
+.info-code-content a {
+    font-size: 15px;
+}
+
+a.socail-text {
+    margin-right: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+a.button {
+    background-color: #000;
+    padding: 8px 0px 8px 11px;
+    display: inline-block;
+    font-size: 11px;
+    min-width: 170px;
+    letter-spacing: 8px;
+    transition: opacity .3s ease;
+    text-align: center;
+    border: 1px solid;
+}
+
+a.button:hover {
+    opacity: 0.8;
+}
+
+.page-featured-image {
+    margin-bottom: 80px;
+}
+
+/* ===================================
+    3. Menu CSS
+====================================== */
+
+.menu-holder-front {
+    display: inline-block;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 999;
+}
+
+.header-logo {
+    transition: .7s;
+}
+
+.open .header-logo {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.header-logo a {
+    display: inline-block
+}
+
+.toggle-holder {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin-left: 35px;
+}
+
+.open .toggle-holder {
+    position: fixed;
+}
+
+.toggle-holder:after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: -1;
+    transition: .3s;
+}
+
+.open .toggle-holder:after {
+    height: 100%;
+    transition-delay: .5s;
+}
+
+#toggle {
+    height: 70px;
+    position: relative;
+}
+
+#toggle:hover {
+    cursor: pointer;
+}
+
+#toggle:before,
+#toggle:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #4d4d4d;
+    left: 17px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transition: transform .7s, width .3s, margin .3s;
+    top: 35px;
+}
+
+#toggle:before {
+    transform: translate3d(0, -8px, 0px);
+}
+
+#toggle.on:before {
+    transform: rotate3d(0, 0, 1, 45deg) translate3d(0, 0, 0);
+    background-color: #fff;
+    margin-left: 5px;
+    margin-top: -2px;
+    width: 26px !important;
+    height: 4px;
+}
+
+#toggle.on:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+    background-color: #fff;
+    margin-left: 5px !important;
+    margin-top: -2px;
+    width: 26px !important;
+    height: 4px;
+}
+
+#toggle:after {
+    transform: translate3d(0, 8px, 0);
+}
+
+#toggle .menu-line {
+    width: 0;
+    height: 2px;
+    background: #4d4d4d;
+    left: 17px;
+    position: absolute;
+    transition: transform .7s, width .3s, margin .3s;
+    top: 35px;
+}
+
+#toggle.all-loaded .menu-line {
+    width: 20px;
+}
+
+#toggle.all-loaded:before {
+    width: 36px;
+}
+
+#toggle.all-loaded:after {
+    width: 30px;
+}
+
+#toggle:hover .menu-line {
+    margin-left: 8px;
+}
+
+#toggle:hover:after {
+    margin-left: 3px;
+}
+
+#toggle.on:hover:after {
+    margin-left: 0;
+}
+
+#toggle.on .menu-line {
+    opacity: 0;
+}
+
+#header-main-menu {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+span.menu-num {
+    position: absolute;
+    top: 5px;
+    color: #666;
+    left: -25px;
+}
+
+.main-menu.sm-clean {
+    background-color: transparent;
+    display: inline-block;
+    max-width: 90%;
+}
+
+.main-menu>li {
+    margin-bottom: 15px;
+}
+
+.sm ul {
+    padding-left: 0;
+}
+
+.sm-clean a {
+    position: relative;
+}
+
+.sm-clean a,
+.sm-clean a:hover,
+.sm-clean a:focus,
+.sm-clean a:active {
+    font-family: 'Unna', serif;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 42px;
+    line-height: 110%;
+    font-weight: 400;
+}
+
+.sm-clean>li>a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 15px;
+    background-color: #333333;
+    transition: width .3s;
+    position: absolute;
+    left: -5%;
+    bottom: 8px;
+    z-index: -1;
+}
+
+.sm-clean a.current:after,
+.sm-clean a:hover:after,
+.sm-clean ul a:hover:after {
+    width: 110%;
+}
+
+.sm-clean a.current {
+    color: #ff0000;
+}
+
+.sm-clean a span.sub-arrow {
+    color: #acacac;
+    font-size: 45px !important;
+    right: -45px;
+    left: auto;
+}
+
+.sm-clean a span.sub-arrow:before {
+    display: block;
+    content: '\203A';
+    transform: rotate(90deg);
+}
+
+.sm-clean a.highlighted span.sub-arrow:before {
+    display: block;
+    content: '\203A';
+    transform: rotate(270deg) translateY(-3px);
+    margin-left: -4px;
+}
+
+.sm-clean .sub-menu li a,
+.sm-clean .children li a {
+    color: #bbbbbb;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 10px;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.sm-clean .sub-menu li a:hover,
+.sm-clean .sub-menu li a.current,
+.sm-clean .children li a:hover,
+.sm-clean .children li a.current {
+    color: #fff;
+}
+
+.menu-holder-back {
+    width: 100%;
+    position: fixed;
+    background-color: #000;
+    background-image: url("images/lines.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    padding-top: 135px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.7s ease;
+}
+
+.menu-holder-back.open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.menu-holder-back {
+    padding-top: 0;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-holder-back>* {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.menu-wrapper-back {
+    width: 1110px;
+    max-width: 95%;
+    margin: 70px auto 0;
+    padding-left: 165px;
+    opacity: 0;
+    transition: opacity 0.7s ease, margin-top 0.7s ease;
+}
+
+.open .menu-wrapper-back {
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.3s;
+}
+
+.menu-text {
+    font-size: 16px;
+    line-height: 170%;
+}
+
+.menu-right-text .menu-text a:hover {
+    color: #acacac;
+}
+
+p.menu-text-title {
+    font-size: 10px;
+    line-height: 110%;
+    letter-spacing: 1px;
+    padding-bottom: 6px;
+    margin-bottom: 0;
+}
+
+.menu-right-text {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+a.social-text {
+    margin-right: 35px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.social-holder a:last-of-type {
+    margin-right: 0;
+}
+
+/* ===================================
+    4. Home CSS
+====================================== */
+
+#portfolio-wrapper {
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#portfolio-grid {
+    transition: all .5s ease;
+    opacity: 1;
+    transform: translateY(0px);
+    padding: 0;
+    list-style: none;
+}
+
+.grid {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
+
+.grid-sizer {
+    width: 50%;
+}
+
+.grid-item {
+    float: left;
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+    overflow: hidden;
+    width: calc(50% - 30px);
+    border: 15px solid transparent;
+}
+
+.grid-item.p_one_half {
+    width: 50%;
+}
+
+.grid-item.p_one {
+    width: calc(100% - 30px);
+}
+
+.grid-item img {
+    width: 100% !important;
+    height: auto;
+    display: block;
+}
+
+.grid-item .entry-holder {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.grid-item a.item-link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.portfolio-text-holder {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.portfolio-title {
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    border: 1px solid;
+    padding: 12px 25px;
+}
+
+.grid-item a.item-link:hover:after,
+.grid-item a.item-link:hover .portfolio-text-holder {
+    opacity: 1;
+}
+
+/* ===================================
+    5. About CSS
+====================================== */
+
+ul.timeline-holder {
+    margin: 0;
+    padding: 0 0 0 40px;
+}
+
+li.timeline-event {
+    margin: 0 0 42px 60px;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 10px;
+    list-style: none;
+    color: #808080;
+    transition: .3s;
+}
+
+li.timeline-event:hover {
+    color: #fff;
+}
+
+li.timeline-event:before {
+    content: "";
+    width: 2px;
+    height: calc(100% - 20px);
+    position: absolute;
+    background-color: #333;
+    left: -30px;
+    top: 51px;
+}
+
+li.timeline-event:last-child:before {
+    display: none;
+}
+
+li.timeline-event:last-child {
+    margin-bottom: 0;
+}
+
+li.timeline-event:hover span.timeline-circle:before {
+    background-color: #333;
+}
+
+span.timeline-circle {
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+
+span.timeline-circle:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 90%;
+    border: 2px solid #333;
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    z-index: 1;
+    transition: .3s;
+}
+
+.timeline-event-date {
+    position: absolute;
+    left: -100px;
+    top: 2px;
+    color: #fff;
+    transition: .3s;
+}
+
+li.timeline-event:hover .timeline-event-date {
+    transform: translateX(-10px);
+}
+
+.timeline-event-content {
+    line-height: 160%;
+    text-align: left;
+}
+
+/* ===================================
+    6. Image Slider CSS
+====================================== */
+
+.simple-image-slider-pagination.swiper-pagination {
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.simple-image-slider-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    vertical-align: middle;
+    margin: 0 5px;
+    border: 3px solid white;
+}
+
+.simple-image-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border-color: #666;
+    background-color: #666;
+}
+
+/* ===================================
+    7. Blog Page CSS
+====================================== */
+
+.blog-holder>article {
+    margin-bottom: 100px;
+}
+
+.blog-holder>article:last-of-type {
+    margin-bottom: 0;
+}
+
+.blog-item-holder .entry-holder {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.blog-item-holder img {
+    margin-bottom: -50px;
+}
+
+.blog-item-holder .entry-info {
+    margin: 0;
+    list-style: none;
+    padding: 20px;
+    display: inline-flex;
+    width: 100%;
+    max-width: 740px;
+    justify-content: space-around;
+    background-color: #fff;
+    color: #000;
+}
+
+.blog-item-holder h2.entry-title {
+    font-family: 'Unna', serif;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 120%;
+    padding: 0;
+    word-break: break-word;
+    margin: 0 auto -95px;
+    max-width: 550px;
+    position: relative;
+}
+
+.entry-info li {
+    font-size: 15px;
+    line-height: 100%;
+}
+
+.entry-info li .entry-info-text {
+    font-weight: 500;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+
+/* ===================================
+    8. Single Post CSS
+====================================== */
+
+.single-post .post-info-wrapper {
+    font-size: 15px;
+    width: 150px;
+    margin-right: 100px;
+    float: left;
+    clear: left;
+    min-width: 150px;
+    min-height: 1px;
+    margin-top: 9px;
+}
+
+.single-post .post-info-wrapper .entry-info,
+.single-post .post-info-wrapper .entry-info a {
+    position: relative;
+    color: #808080;
+}
+
+.single-post .post-info-wrapper .entry-info a:hover {
+    color: #fff;
+}
+
+.single-post .post-info-wrapper .entry-info>div {
+    margin-bottom: 20px;
+}
+
+.single-post .post-info-wrapper .entry-info>div:last-of-type {
+    margin-bottom: 0;
+}
+
+.single-post .post-info-wrapper .text-holder {
+    font-size: 10px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.single-post h1.entry-title {
+    font-family: "Unna", serif;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 120%;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0 auto 60px;
+    width: 680px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.single-post .entry-info div:last-of-type:after {
+    display: none;
+}
+
+.single-post .entry-info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.single-post .entry-info ul li {
+    display: inline-block;
+}
+
+.single-post .entry-info .cat-links li:after {
+    content: ",";
+    padding-right: 5px;
+}
+
+.single-post .entry-info .cat-links ul li:last-child:after {
+    display: none;
+}
+
+.img-caption {
+    display: table;
+    padding: 12px 60px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #808080;
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
+}
+
+.single-post .entry-content {
+    width: 680px;
+    float: left;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.tags-holder {
+    margin: 30px 0;
+    display: inline-block;
+}
+
+.tags-holder a {
+    color: #808080;
+    border: 3px solid #808080;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 17px 5px 20px;
+    font-size: 10px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: all .3s ease;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.tags-holder a:last-of-type {
+    margin-right: 0;
+}
+
+.tags-holder a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* ===================================
+    9. Contact Page CSS
+====================================== */
+
+.my-info span {
+    color: #808080;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+    border: 0;
+    border-bottom: 2px solid #333333;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin: 10px 0;
+    height: 28px;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    line-height: 25px;
+    background-color: transparent;
+    color: #808080;
+}
+
+.contact-form input[name="your-name"] {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type=submit] {
+    display: inline-block;
+    border: 2px solid;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: #1a1a1a;
+    color: #808080;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 8px;
+    transition: opacity .3s ease;
+    cursor: pointer;
+}
+
+.contact-form input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.contact-form input[type=text]::-webkit-input-placeholder,
+.contact-form input[type=email]::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+    font-family: 'Work Sans', sans-serif;
+    color: #808080;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 1;
+}
+
+.contact-form input[type=text]:-ms-input-placeholder,
+.contact-form input[type=email]:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+    font-family: 'Work Sans', sans-serif;
+    color: #808080;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 1;
+}
+
+.contact-form input[type=text]::placeholder,
+.contact-form input[type=email]::placeholder,
+.contact-form textarea::placeholder {
+    font-family: 'Work Sans', sans-serif;
+    color: #808080;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    opacity: 1;
+}
+
+/* ===================================
+    10. Footer CSS
+====================================== */
+
+footer {
+    width: calc(100% - 165px);
+    margin-left: 165px;
+}
+
+.footer-content {
+    color: #6f6f6f;
+    margin-top: 150px;
+}
+
+.footer-content a {
+    color: #acacac;
+}
+
+.footer-content a:hover {
+    color: #fff;
+}
+
+.footer-logo img {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto 55px;
+    display: block;
+}
+
+.copyright-holder {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ===================================
+    11. Responsive CSS
+====================================== */
+
+@media screen and (max-width: 1366px) {
+    .menu-wrapper-back {
+        padding-left: 25%;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .blog-item-holder .entry-info {
+        max-width: 85%;
+    }
+    .single-post .post-info-wrapper {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .single-post .post-info-wrapper .entry-info {
+        position: relative !important;
+        top: 0 !important;
+    }
+    .single-post .post-info-wrapper .entry-info>div {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    .single-post .entry-content {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .site-content,
+    footer {
+        padding: 0;
+        width: 100%;
+        margin-left: auto;
+    }
+    .site-content {
+        margin-top: 80px;
+    }
+    .header-logo img,
+    .footer-logo img {
+        width: 70px;
+        height: auto;
+    }
+    #toggle {
+        padding: 0;
+    }
+    .menu-holder-front {
+        display: block;
+        position: relative;
+        width: calc(100% - 30px);
+        left: 15px;
+    }
+    .toggle-holder {
+        right: 15px;
+        top: 0;
+        position: absolute;
+        margin-left: 0;
+    }
+    .open .toggle-holder {
+        top: 30px;
+        right: 30px;
+    }
+    .menu-wrapper-back {
+        padding-top: 100px;
+        padding-left: 10%;
+    }
+    .blog-item-holder .entry-holder {
+        opacity: 1;
+        padding: 25px 0;
+    }
+    .blog-item-holder .entry-holder {
+        display: block;
+    }
+    .one_half,
+    .one_third,
+    .one_fourth,
+    .two_third,
+    .three_fourth {
+        width: 100% !important;
+        float: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .contact-form {
+        margin-top: 50px;
+    }
+    .footer-content {
+        margin-top: 75px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu-wrapper-back {
+        padding-left: 0;
+    }
+    body.page-background,
+    .menu-holder-back {
+        background-image: none;
+    }
+    #header-main-menu {
+        width: 90% !important;
+        display: block;
+        margin-left: 70px;
+    }
+    .menu-left-part {
+        padding-top: 100px;
+        height: calc(100% - 100px);
+        padding-left: 45px;
+        width: calc(100% - 45px);
+    }
+    .menu-left-part>* {
+        position: relative;
+        top: 0;
+        transform: none;
+    }
+    .menu-right-text {
+        display: block;
+        width: 75%;
+        margin-left: 50px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .grid-item,
+    .grid-sizer {
+        width: 100% !important;
+        float: none;
+        border: 0;
+        margin-bottom: 20px;
+    }
+    .blog-item-holder h2.entry-title {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .blog-item-holder .entry-info {
+        display: none;
+    }
+    .single-post h1.entry-title,
+    .blog-item-holder h2.entry-title,
+    h1.entry-title.page-title {
+        font-size: 34px;
+        margin-bottom: 35px;
+    }
+    .page-featured-image {
+        margin-bottom: 40px;
+    }
+    .img-caption {
+        font-size: 12px;
+        line-height: 130%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .single-content-wrapper {
+        margin-top: 40px;
+    }
+    .single-post h1.entry-title,
+    .blog-item-holder h2.entry-title,
+    h1.entry-title.page-title {
+        font-size: 27px;
+    }
+    .simple-image-slider-pagination.swiper-pagination {
+        margin-bottom: 15px;
+    }
+    .single-post .post-info-wrapper .entry-info>div {
+        display: block;
+        line-height: 130%;
+        margin: 20px 0;
+    }
+}
